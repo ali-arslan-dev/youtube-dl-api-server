@@ -31,7 +31,7 @@ def main():
 
     parser.add_argument(
         '--number-processes',
-        default=5,
+        default=1,
         type=int,
         help=('The number of processes the server will use. The default is: '
               '%(default)s'),
@@ -45,4 +45,4 @@ def main():
         print(__version__)
         exit(0)
 
-    app.run(args.host, args.port, processes=args.number_processes)
+    app.run(args.host, args.port)
